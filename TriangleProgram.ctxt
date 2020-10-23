@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=TriangleProgram
+comment0.text=\r\n\ This\ program\ will\ determine\ whether\ 3\ triangle\ sides\ are\ scalene\ isosceles,\ or\ equilateral\r\n\r\n\ @Sri\ Vivekanandan\ (your\ name)\r\n\ @10-20-2020\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2
