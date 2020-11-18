@@ -1,33 +1,41 @@
-
+import java.util.Scanner;
 /**
- * Write a description of class Taxes here.
+ * This program will compute your tax in 1913 based on your income
  *
- * @author (your name)
+ * Sri Vivekanandan
  * @version (a version number or a date)
  */
 public class Taxes
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Taxes
-     */
-    public Taxes()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("Please enter your income: ");
+        double income = input.nextDouble();
+        double taxRate = 0.0;
+        double tax = 0.0;
+        if(income > 50000 && income < 75000){
+            taxRate = .02;
+        }else if(income > 75000 && income < 100000){
+            taxRate = .03;
+        }else if(income > 100000 && income < 250000){
+            taxRate = .04;
+        }else if(income > 250000 && income < 500000){
+            taxRate = .05;
+        }else if(income > 500000){
+            taxRate = .06;
+        }else{
+            taxRate = .01;
+        }
+        tax = income * taxRate;
+        System.out.println("Income of: " + income + " Tax: " + tax);
+        
+        
+    
+    
+    
     }
 }
+//Please enter your income: 
+//85000
+//Income of: 85000.0 Tax: 2550.0
