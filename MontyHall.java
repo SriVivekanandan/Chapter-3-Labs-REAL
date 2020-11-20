@@ -12,12 +12,7 @@ public class MontyHall
 
       Random generator = new Random();
 
- 
-
       // Simulate the game 1000 times
-
- 
-
          // Host must pick a door that's not the player's door and not the
          // door with the car
 
@@ -50,13 +45,9 @@ public class MontyHall
 
            
             // find goat door for host to open that has not been picked by player and
-
             // is not the car door
-
             int host_goat_door = 0;
-
-           
-
+    
             while((host_goat_door == car_door ) || ( picked_door == host_goat_door)){
                 host_goat_door = generator.nextInt(3); //loop runs until host door is not a car door or a picked door
             }
