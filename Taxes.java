@@ -14,20 +14,22 @@ public class Taxes
         double income = input.nextDouble();
         double taxRate = 0.0;
         double tax = 0.0;
-        if(income > 50000 && income < 75000){
-            taxRate = .02;
-        }else if(income > 75000 && income < 100000){
-            taxRate = .03;
-        }else if(income > 100000 && income < 250000){
-            taxRate = .04;
-        }else if(income > 250000 && income < 500000){
-            taxRate = .05;
+        
+        //caluclate tax based on income 
+        if(income <= 75000){
+            tax = ((income-50000) * .02 + 500);
+        }else if(income <= 100000){
+            tax = ((income-75000) * .03 + 1000);
+        }else if(income <= 250000){
+            tax = ((income - 100000) * .04 + 1750); //
+        }else if(income <=500000){
+            tax = ((income - 250000) * .05 + 7750);
         }else if(income > 500000){
-            taxRate = .06;
+            tax = ((income-500000) * .06 + 20250);
         }else{
             taxRate = .01;
         }
-        tax = income * taxRate;
+        
         System.out.println("Income of: " + income + " Tax: " + tax);
         
         
@@ -37,5 +39,9 @@ public class Taxes
     }
 }
 //Please enter your income: 
-//85000
-//Income of: 85000.0 Tax: 2550.0
+//600000
+//Income of: 600000.0 Tax: 26250.0
+//Please enter your income: 
+//110000
+//Income of: 110000.0 Tax: 2150.0
+
