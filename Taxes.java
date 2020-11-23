@@ -29,7 +29,7 @@ public class Taxes
         }else{
             taxRate = .01;
         }
-        
+        //display income and tax
         System.out.println("Income of: " + income + " Tax: " + tax);
         
         
